@@ -13,7 +13,7 @@ export class GeneratedContent {
     contentType: string,
     originalPrompt: string,
     tokensUsed: number,
-    metadata: Record<string, any>[]
+     metadata: Record<string, any> = {} 
   ) {
     this.validateContent(content);
 
