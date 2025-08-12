@@ -10,7 +10,9 @@ export class GenerateContentUseCase {
       const generatedContent = await this.contentRepository.generateContent(
         request
       );
+
       await this.contentRepository.saveContent(generatedContent);
+
       return generatedContent;
     } catch (error: any) {
       throw new Error(`Failed to generate content: ${error.message}`);
